@@ -1,44 +1,27 @@
-// $(document).ready(function() {
+$(window).on('load resize', function() {
 
-//    width = $(".galimg").width(),
-//    height = $(".galimg").height(),
-
-
-// 	if (width > height) {
-// 		$('.galimg').addClass('landscape')
-// 	}
-
-// 	else { $('.galimg').addClass('landscape')
-// 	}
-
-// });
-
-$(document).ready(function() {
+	var width = $('.galimg').width();
+	var height = $('.galimg').height();
 
 
-  $('.galimg').each(function() {
+  $('.galimg').find('img').each(function() {
 
-    var width = $(this).children("img").width(),
-        height = $(this).children("img").height();
 
     if (width < height) {
-      $(this).addClass('portrait');
+      $(this).addClass('portrait')
     } 
 
     else {
-      $(this).addClass('landscape');
+      $(this).addClass('landscape')
     }
 
   });
+
+  $('img').each(function() {
+
+  	$(this).height(width);
+
+  });
+
 });
 
-
-    // if (image.width() < 500) {
-    //     $('.work-text').addClass('work-text-small');
-    // }
-
-
-    //   if (width < height) {
-    //     $this.addClass('portrait');
-    //   } else {
-    //     $this.addClass('landscape');
