@@ -1,3 +1,4 @@
+
 $(window).on('load resize', function() {
 
 	var width = $('.galimg').width();
